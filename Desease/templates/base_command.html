@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="{% static '/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static '/bower_components/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="{% static '/bower_components/Ionicons/css/ionicons.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static '/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static '/dist/css/skins/_all-skins.min.css' %}">
+  <link rel="stylesheet" href="{% static '/plugins/iCheck/all.css' %}">
+ <link rel="stylesheet" href="{% static '/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css' %}">
+  <script src="{% static '/bower_components/jquery/dist/jquery.min.js' %}"></script>
+
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="{% static '/dist/css/AdminLTE.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="{% static '/dist/css/skins/_all-skins.min.css' %}" rel="stylesheet" type="text/css" />
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
+</head>
+<style>
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+    body {
+      position: relative;
+  }
+</style>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: azure">
+<nav class="navbar navbar-expand-lg navbar-fixed-top" style="background-color:#8B008B" >
+  <div class="container-fluid" style="background-color: #8B008B">
+    <div class="navbar-header" style="background-color:#8B008B">
+      <a class="navbar-brand" href="#" style="color: white; font-family: 'Bitstream Vera Sans'">Swipekart</a>
+    </div>
+    <ul class="nav navbar-nav" style="background-color:#8B008B">
+      <li class="active"><a href="{% url 'index' %}" style="color: white">Home</a></li>
+
+
+
+    </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+            <li><h4 style="color: white;"><span class="glyphicon glyphicon-user" ></span> </h4></li>
+             <li>
+                 <a href='{% url 'log' %}' ><font color="white">Logout</font> </a>
+            </li>
+              <li>
+                 </li>
+&nbsp;&nbsp;&nbsp;&nbsp;
+    </ul>
+
+  </div>
+
+
+</nav>
+<br><br><br><br>
+    <center><form>
+<input type="button" class="btn btn-upload" value="create user" onclick="window.location.href='{% url 'usrcr' %}'"  style="width: 200px;color: white; background-color:blue;height: 50px; border-radius: revert;"/>
+</form><br><form><a class="btn btn-app" value="upload_book" onclick="window.location.href='{% url 'list_user' %}'">
+                    <i class="fa  fa-user"></i> User list
+                    
+
+                  </a>
+                  </form>
+                  <form><a class="btn btn-app" value="upload_book" onclick="window.location.href='{% url 'list_command' %}'">
+                    <i class="fa  fa-comments"></i> Comment list
+                   
+                  </a>
+                  </form</center>
+<center><font color="#00008b">
+<div class="jumbotron jumbotron-fluid" style="background-color: white;width: 1000px;">
+  <div class="container">
+   <table class="table" style="border: azure;">
+    <thead>
+    <tr>
+        <th>Name</th>
+        
+        <th>Review</th>
+        
+    </tr>
+
+    </thead>
+    {% for ch in command %}
+        <tr>
+        <td>{{ ch.name }}</td>
+        
+        <td>{{ ch.reviwe }}</td>
+       
+        </tr>
+    {% endfor %}
+    </table>
+  </div>
+</div> 
+
+ </font>
+
+</center>
+</div>
+
+</body>
+</html>

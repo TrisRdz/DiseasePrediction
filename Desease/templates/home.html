@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'base_log.html' %}
+
+{% load static%}
+{% block content %}
+<html lang="en">
+	<head>
+     		<title>DPS</title>
+     		 <link href="{% static 'css/style.css' %}" rel="stylesheet">
+          <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+<body>
+
+		<header>
+			<div class="main">
+				<div class="logo">
+					<img src="{% static 'image/logo.png' %}"> <br>
+                                       
+				</div>
+				<ul>
+ 				    <li class="active"><a href="http://127.0.0.1:8000/">Home</a></li>
+				    <li><a href="http://127.0.0.1:8000/find">Find your disease</a></li>
+   				    <li><a href="http://127.0.0.1:8000/Hospitals">Hospitals</a></li>
+   				    <li><a href="http://127.0.0.1:8000/about">about us</a></li>
+ 				    <li><a href="http://127.0.0.1:8000/contact">Contact us</a></li>
+    				</ul>
+			</div>
+		<div class="about">
+		
+		<br><br><br><br><br>
+		<h1>You can find your disease according to your symptoms...</h1>
+		<ul>
+		
+		<img src="{% static 'image/mission.jpg' %}">
+		<p><p><h2>OUR VISION</h2></p><p>
+		
+		</ul>
+		</div>
+
+
+		</header>
+	</body>
+
+</html>
+{% endblock %}

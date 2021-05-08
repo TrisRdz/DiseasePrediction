@@ -1,0 +1,57 @@
+<html>
+<head>
+<h3 align="center"><u>Displayiny Details</u></h3>
+<body>
+
+
+
+
+<table border="1" cellpadding="2" cellspacing="0" align="center">
+
+
+<form action="{% url 'sgn3' %}" method="post" style="height: 200px; width: 300px;">
+ {% csrf_token %}
+ 
+
+
+ <thead>
+  <tr>
+   <br><br><br>
+        <th> Fname</th>
+        <th>Lname</th>
+        
+        
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+
+   
+  </tr>
+ </thead>
+
+
+  {% for ch in user0 %}
+        <tr>
+ 
+        <td>{{ ch.Fname}}</td>
+        <td>{{ ch.Lname}}</td>
+        
+        <td>{{ ch.Username }}</td>
+        <td>{{ ch.Email }}</td>
+   
+        <td>{{ ch.Password }}</td>
+
+ 
+        </tr>
+    {% endfor %}
+
+<form method="post" action="{% url 'delete_user' %}">
+    {% csrf_token %}Enter the username
+     <input type="text" name="name">
+    <button type="submit" class="btn btn-primary">Delete</button></form>
+
+</form>
+</table>
+</body>
+</head>
+</html>

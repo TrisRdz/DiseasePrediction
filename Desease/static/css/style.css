@@ -1,0 +1,141 @@
+{% load static %}
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family:century Gothic;
+}
+.abc
+{
+    width: 100%;
+    height: 300px;
+    background-image: url("/home/school/Documents/disease/project/desease/myapp/static/css/home2.jpg");
+}
+
+ul
+{
+	list-style-type: none;
+	float: right;
+	margin-top: 25px;
+
+}
+ul li
+{
+	display: inline-block;
+
+}
+ul li a
+{
+	text-decoration: none;
+	color:#e83e8c;
+	padding: 5px 20px;
+	border: 1px solid #007bff;
+	font-size: 1em;
+	transition: 0.6s ease;
+}
+ul li a:hover
+{
+	background-color: #fff;
+	color: #00;
+}
+.logo img
+{
+	margin-top: 30px;
+	FLOAT:LEFT;
+	width: 250px;
+	height: auto;
+}
+.main
+{
+	max-width: 1200px;
+	margin: auto;
+}
+.title
+{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.button
+{
+	position: absolute;
+	top:60%;
+	left: 50%;
+	transform: translate(-40%,-50%);
+}
+.btn
+{
+	text-decoration: none;
+	color:#e83e8c;
+	padding: 5px 20px;
+	border: 1px solid #007bff;
+	font-size: 1em;
+	transition: 0.6s ease;
+}
+.btn:hover
+{
+	background-color: #fff;
+	color: #00;
+}
+.form
+{
+   margin-top: ;
+	 MARGIN-left:;
+	width: 350px;
+	height: auto;
+}
+.log
+{
+  margin-top: ;
+	 MARGIN-left:;
+	width: 350px;
+	height: auto;
+}
+.location
+{
+	width: 150px;
+	height: auto;
+}
+.tvmhos
+{
+	margin-top:150px;
+	width: 450px;
+	height: auto;
+}
+.about
+{
+   margin-top: ;
+	 MARGIN-left:;
+	width: 1000px;
+	height: auto;
+}
+.message
+{
+  margin-top: ;
+	 MARGIN-left:100px;
+	width: 350px;
+	height: auto;
+}
+.finddis
+{
+  margin-top: 100px;
+	 MARGIN-left:;
+	width: 350px;
+	height: auto;
+
+}
+.col-sm-8
+{
+  margin-top: ;
+	 MARGIN-left:100px;
+	width: 350px;
+	height: auto;
+}
+.symp
+{
+  margin-top: ;
+	 MARGIN-left:10px;
+	width: 350px;
+	height: auto;
+}

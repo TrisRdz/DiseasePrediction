@@ -1,0 +1,17 @@
+{% extends 'base_log.html' %}
+
+{% load static%}
+{% block content %}
+    <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+  <h2>Sign up</h2>
+  <form method="post" style="alignment: center;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+    </div>
+    </div>
+        <br>
+{% endblock %}

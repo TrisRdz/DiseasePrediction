@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+    body {
+      position: relative;
+  }
+</style>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: azure">
+<nav class="navbar navbar-expand-lg navbar-fixed-top" style="background-color:#8B008B" >
+  <div class="container-fluid" style="background-color: #8B008B">
+    <div class="navbar-header" style="background-color:#8B008B">
+      <a class="navbar-brand" href="#" style="color: white; font-family: 'Bitstream Vera Sans'">MEDICARE</a>
+    </div>
+    <ul class="nav navbar-nav" style="background-color:#8B008B">
+      <li class="active"><a href="{% url 'index' %}" style="color: white">Home</a></li>
+
+
+
+    </ul>
+        <ul class="nav navbar-nav navbar-right">
+{% for ch in  context %}
+    <li>{{ ch.name }}</li>
+{% endfor %}
+            <li><h4 style="color: white;"><span class="glyphicon glyphicon-user" ></span> </h4></li>
+             <li>
+                 <a href='{% url 'log' %}' ><font color="white">Logout</font> </a>
+            </li>
+&nbsp;&nbsp;&nbsp;&nbsp;
+    </ul>
+
+  </div>
+
+
+</nav>
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+<br>
+<br>
+<br>
+{% block content %}
+{% endblock %}
+
+   </div>
+
+<div class="jumbotron jumbotron-fluid" style="background-color:#43005f;" >
+  <div class="container">
+ <div class="row">
+  <div class="col-sm-4">
+       <h4 class="media-heading" style="font-size:20px; color:white">Contact</h4>
+
+       <h4 class="media-heading" style="font-size:15px; color:white">Swipekart</h4>
+
+       <h4 class="media-heading" style="font-size:15px; color:white">skst:980</h4>
+
+       <h4 class="media-heading" style="font-size:15px; color:white">Delhi</h4>
+
+   <h4 style="font-size:15px; color:white">
+          <span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;9846123456
+
+      </h4>
+  </div>
+
+  <div class="col-sm-8">
+      <h1 style="font-size:20px; color:white;"><b>Write your reviews</b></h1><br>
+ <form class="needs-validation"  action="{% url 'command'%}" method="post">
+           {% csrf_token %}
+     <div class="form-row">
+     <div class="col-md-4 mb-3">
+      <label for="validationCustom01" style="font-size:15px; color:white">Name</label>
+      <input type="text" class="form-control" name="name" id="validationCustom01" placeholder="" value="" required>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01" style="font-size:15px; color:white;"><br>Brand</label>
+  <select name="brand">
+    <option value="Apple-iPhoneXr">Apple-iPhoneXr</option>
+    <option value="Honor-9n">Honor-9n</option>
+    <option value="Oppo-r17">Oppo-r17</option>
+    <option value="Samsung-galaxy-s6">Samsung-galaxy-s6</option>
+      <option value="Vivo-v9">Vivo-v9</option>
+            <option value="Xiaomi-poco-f1">Xiaomi-poco-f1</option>
+
+
+  </select>
+
+    </div>    </div>
+
+<div class="col-md-4 mb-3">
+      <label for="validationCustom01" style="font-size:15px; color:white;">Write the reviwe</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="8" ></textarea>
+
+    </div>
+</div>
+<br>
+    <div class="form-row">
+     <div class="col-md-4 mb-3">
+         <br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="submit" value="Submit" class="btn btn-upload">
+     </div>
+    </div>
+</form>
+  </div>
+</div>
+ </div>
+</div>
+
+</body>
+</html>
