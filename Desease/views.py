@@ -191,7 +191,7 @@ def sel(request, sklearn=None):
             l2.append(0)
 
         # TESTING DATA df -------------------------------------------------------------------------------------
-        df = pd.read_csv("C:\Desease_Predition\Desease\static\images\Training.csv",engine='python',encoding = "utf-8-sig")
+        df = pd.read_csv("./Desease/static/images/Training.csv",engine='python',encoding = "utf-8-sig")
 
         df.replace(
             {'prognosis': {'Fungal infection': 0, 'Allergy': 1, 'GERD': 2, 'Chronic cholestasis': 3, 'Drug Reaction': 4,
@@ -218,7 +218,7 @@ def sel(request, sklearn=None):
         # print(y)
 
         # TRAINING DATA tr --------------------------------------------------------------------------------
-        tr = pd.read_csv("C:\Desease_Predition\Desease\static\images\Testing.csv",engine='python', encoding = "utf-8-sig")
+        tr = pd.read_csv("./Desease/static/images/Training.csv",engine='python', encoding = "utf-8-sig")
         tr.replace(
             {'prognosis': {'Fungal infection': 0, 'Allergy': 1, 'GERD': 2, 'Chronic cholestasis': 3, 'Drug Reaction': 4,
                            'Peptic ulcer diseae': 5, 'AIDS': 6, 'Diabetes ': 7, 'Gastroenteritis': 8,
