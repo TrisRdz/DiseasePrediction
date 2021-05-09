@@ -240,15 +240,15 @@ def sel(request, sklearn=None):
         np.ravel(y_test)
 
         # ------------------------------------------------------------------------------------------------------
-
-        from sklearn import tree
-
-        clf3 = tree.DecisionTreeClassifier()  # empty model of the decision tree
-        clf3 = clf3.fit(X, y)
+	
+	
 
         # calculating accuracy-------------------------------------------------------------------
+        from sklearn.naive_bayes import GaussianNB
+        gnb = GaussianNB()
+        gnb=gnb.fit(X,np.ravel(y))
         from sklearn.metrics import accuracy_score
-        y_pred = clf3.predict(X_test)
+        y_pred=gnb.predict(X_test)
         print(accuracy_score(y_test, y_pred))
         print(accuracy_score(y_test, y_pred, normalize=False))
         # -----------------------------------------------------
@@ -266,7 +266,7 @@ def sel(request, sklearn=None):
                     l2[k] = 1
 
         inputtest = [l2]
-        predict = clf3.predict(inputtest)
+        predict = gnb.predict(inputtest)
         predicted = predict[0]
 
         h = 'no'
