@@ -131,3 +131,6 @@ dmypy.json
 # tris local env files
 .my-project-env
 my-project-env/
+
+# akza vscode files
+.vscode/

@@ -191,7 +191,7 @@ def sel(request, sklearn=None):
             l2.append(0)
 
         # TESTING DATA df -------------------------------------------------------------------------------------
-        df = pd.read_csv("C:\Desease_Predition\Desease\static\images\Training.csv",engine='python',encoding = "utf-8-sig")
+        df = pd.read_csv("./Desease/static/images/Training.csv",engine='python',encoding = "utf-8-sig")
 
         df.replace(
             {'prognosis': {'Fungal infection': 0, 'Allergy': 1, 'GERD': 2, 'Chronic cholestasis': 3, 'Drug Reaction': 4,
@@ -218,7 +218,7 @@ def sel(request, sklearn=None):
         # print(y)
 
         # TRAINING DATA tr --------------------------------------------------------------------------------
-        tr = pd.read_csv("C:\Desease_Predition\Desease\static\images\Testing.csv",engine='python', encoding = "utf-8-sig")
+        tr = pd.read_csv("./Desease/static/images/Training.csv",engine='python', encoding = "utf-8-sig")
         tr.replace(
             {'prognosis': {'Fungal infection': 0, 'Allergy': 1, 'GERD': 2, 'Chronic cholestasis': 3, 'Drug Reaction': 4,
                            'Peptic ulcer diseae': 5, 'AIDS': 6, 'Diabetes ': 7, 'Gastroenteritis': 8,
@@ -240,15 +240,15 @@ def sel(request, sklearn=None):
         np.ravel(y_test)
 
         # ------------------------------------------------------------------------------------------------------
-
-        from sklearn import tree
-
-        clf3 = tree.DecisionTreeClassifier()  # empty model of the decision tree
-        clf3 = clf3.fit(X, y)
+	
+	
 
         # calculating accuracy-------------------------------------------------------------------
+        from sklearn.naive_bayes import GaussianNB
+        gnb = GaussianNB()
+        gnb=gnb.fit(X,np.ravel(y))
         from sklearn.metrics import accuracy_score
-        y_pred = clf3.predict(X_test)
+        y_pred=gnb.predict(X_test)
         print(accuracy_score(y_test, y_pred))
         print(accuracy_score(y_test, y_pred, normalize=False))
         # -----------------------------------------------------
@@ -266,7 +266,7 @@ def sel(request, sklearn=None):
                     l2[k] = 1
 
         inputtest = [l2]
-        predict = clf3.predict(inputtest)
+        predict = gnb.predict(inputtest)
         predicted = predict[0]
 
         h = 'no'
