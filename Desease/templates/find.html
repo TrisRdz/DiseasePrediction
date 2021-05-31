@@ -13,9 +13,10 @@
   <link href="{% static 'css/find.css' %}" rel="stylesheet">     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    </head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	</head>
 	<body>
-		<div class="main">
+		<!-- <div class="main">
 			<div class="logo">
 				<img src="{% static 'image/logo.png' %}"> <br>
 			</div>
@@ -26,8 +27,8 @@
 				<li><a href="http://127.0.0.1:8000/about">about us</a></li>
 				<li><a href="http://127.0.0.1:8000/contact">Contact us</a></li>
 			</ul>
-		</div>
-		<div class="symp">
+		</div> -->
+		<div>
 			<form action="{% url 'sel' %}" method="post" autocomplete="off" class="symptomForm">
 				{% csrf_token %}
 				<div class="symptomItem">

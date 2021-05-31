@@ -2,6 +2,9 @@
 body {
   font: 16px Arial;
 }
+.container {
+  margin-top: 5%;
+}
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
@@ -52,19 +55,25 @@ input[type=submit] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
+  font-family: 'Roboto';
 }
 
 .symptomItem {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 10px;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .symptomTitle {
     margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    color: #344563;
 }
 
 .submitButton {
   width: 100px;
+  margin-top: 20px;
+  border-radius: 5px;
 } 
