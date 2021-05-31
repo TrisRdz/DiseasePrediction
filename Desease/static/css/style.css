@@ -1,4 +1,3 @@
-{% load static %}
 *
 {
 	margin: 0;
@@ -36,7 +35,7 @@ ul li a
 ul li a:hover
 {
 	background-color: #fff;
-	color: #00;
+	color: #000;
 }
 .logo img
 {
@@ -76,19 +75,19 @@ ul li a:hover
 .btn:hover
 {
 	background-color: #fff;
-	color: #00;
+	color: #000;
 }
-.form
+.loginForm
 {
-   margin-top: ;
-	 MARGIN-left:;
+	display: flex;
+	flex-direction: column;
 	width: 350px;
 	height: auto;
+	align-items: center;
+	background-color: red;
 }
 .log
 {
-  margin-top: ;
-	 MARGIN-left:;
 	width: 350px;
 	height: auto;
 }
@@ -105,14 +104,11 @@ ul li a:hover
 }
 .about
 {
-   margin-top: ;
-	 MARGIN-left:;
 	width: 1000px;
 	height: auto;
 }
 .message
 {
-  margin-top: ;
 	 MARGIN-left:100px;
 	width: 350px;
 	height: auto;
@@ -120,21 +116,18 @@ ul li a:hover
 .finddis
 {
   margin-top: 100px;
-	 MARGIN-left:;
 	width: 350px;
 	height: auto;
 
 }
 .col-sm-8
 {
-  margin-top: ;
 	 MARGIN-left:100px;
 	width: 350px;
 	height: auto;
 }
 .symp
 {
-  margin-top: ;
 	 MARGIN-left:10px;
 	width: 350px;
 	height: auto;

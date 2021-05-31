@@ -288,7 +288,7 @@ def sel(request, sklearn=None):
             print("in gp3")
             # return render(request,'myapp/h.html')
 
-        return render(request, 'find.html', {'ss': disease[a]})
+        return render(request, 'find.html', { 'predictedDisease': disease[a] })
     else:
         return render(request, 'home.html')
 
